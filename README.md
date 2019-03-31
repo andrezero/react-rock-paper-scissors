@@ -2,12 +2,10 @@
 
 > my first experiment with React
 
-- Based on [https://github.com/microsoft/typescript-react-starter](typescript-react-starter)
-- With further help from [https://github.com/piotrwitek/react-redux-typescript-guide](react-redux-typescript-guide)
+- Based on [typescript-react-starter](https://github.com/microsoft/typescript-react-starter)
+- With further help from [react-redux-typescript-guide](https://github.com/piotrwitek/react-redux-typescript-guide)
 - Developing with [Storybook](https://storybook.js.org/) with [Typescript](https://storybook.js.org/docs/configurations/typescript-config/) support
-- Testing components with
-[https://jestjs.io](jest),
-[https://github.com/airbnb/enzyme](enzyme) and [https://github.com/producthunt/chai-enzyme](chai-enzyme)
+- Testing components with [jest](https://jestjs.io), [enzyme](https://github.com/airbnb/enzyme) and [chai-enzyme](https://github.com/producthunt/chai-enzyme)
 - Full on Typescript (with super strict linting)
 - No Redux yet, React only
 
@@ -35,12 +33,13 @@ yarn add -D chai chai-enzyme enzyme enzyme-adapter-react-16 sinon @types/chai @t
 npx -p @storybook/cli sb init
 yarn add -D @storybook/addon-info react-docgen-typescript-webpack-plugin
 yarn add -D awesome-typescript-loader react-docgen-typescript-loader
-yarn add -D @types/storybook__react @types/storybook__addon-actions @types/storybook__addon-links
+yarn add -D @types/storybook__react @types/storybook__addon-actions @types/storybook__addon-info @types/storybook__addon-links
 # don't forget to add "rootDirs": ["src", "stories"] to tsconfig.json
 # and to create .storybook/webpack.config.js
 
 # husky > prettier
-yarn add husky lint-staged prettier
+yarn add -D husky lint-staged prettier
+# don't forget to add added "husky" and "lint-staged" to package.json
 
 # app dependencies
 yarn add classnames
@@ -96,5 +95,6 @@ Start debugging in VS Code by pressing `F5` or by clicking the green debug icon.
 
 ## Todo
 
-- [] Prettier + git pre-commit-hook
-- [] Explore remaining tools of create-react-app [TUTORIAL.md](TUTORIAL)
+- [x] Prettier + git pre-commit-hook
+- [ ] Test async behaviours
+- [ ] Explore remaining tools of create-react-app [TUTORIAL.md](TUTORIAL)

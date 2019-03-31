@@ -1,27 +1,29 @@
 import * as chai from 'chai';
-import * as chaiEnzyme from 'chai-enzyme'
+import * as chaiEnzyme from 'chai-enzyme';
 import * as enzyme from 'enzyme';
 import * as React from 'react';
 
-chai.use(chaiEnzyme())
+chai.use(chaiEnzyme());
 const expect = chai.expect;
 
 import Move from '../move/move';
 import CurrentMoves from './current-moves';
 
 it('has class current-moves', () => {
-  const currentMoves = enzyme.shallow(<CurrentMoves/>);
+  const currentMoves = enzyme.shallow(<CurrentMoves />);
   expect(currentMoves).to.have.className('current-moves');
 });
 
-it('has class active', () => {
-  const currentMoves = enzyme.shallow(<CurrentMoves/>);
+xit('has class active', () => {
+  const currentMoves = enzyme.shallow(<CurrentMoves />);
   expect(currentMoves).to.have.className('active');
 });
 
 it('renders 2 moves', () => {
-  const currentMoves = enzyme.shallow(<CurrentMoves/>);
-  expect(currentMoves).to.have.exactly(2).descendants(Move)
+  const currentMoves = enzyme.shallow(<CurrentMoves />);
+  expect(currentMoves)
+    .to.have.exactly(2)
+    .descendants(Move);
 });
 
 it('renders selected moves', () => {

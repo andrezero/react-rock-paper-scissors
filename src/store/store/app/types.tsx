@@ -1,12 +1,12 @@
 export interface IScore {
-  p1: number,
-  p2: number
+  p1: number;
+  p2: number;
 }
 
 export interface IScoreHistory {
-  scores: IScore[]
+  scores: IScore[];
 }
 
 export interface IScoreHistory {
-  scores: IScore[]
+  scores: IScore[];
 }
