@@ -1,0 +1,30 @@
+.move-options {
+  display: flex;
+  justify-content: space-between;
+}
+
+.move-options.enabled > * {
+  cursor: pointer;
+}
+
+.move-options .move {
+  opacity: 0.5;
+}
+
+.move-options.enabled .move,
+.move-options .selected {
+  opacity: 1;
+}
+
+@media only screen and (orientation: portrait) {
+  .move-options .move {
+    width: 23vw;
+  }
+}
+
+@media only screen and (orientation: landscape) {
+  .move-options {
+    flex-direction: column;
+    width: 23vh;
+  }
+}

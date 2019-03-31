@@ -1,0 +1,16 @@
+.splash h1 {
+  font-size: 2.5rem;
+}
+
+.splash .intro {
+  margin-bottom: 4rem;
+  font-size: 1.5rem;
+}
+
+.splash .footer {
+  text-align: center;
+}
+
+.splash .start {
+  font-size: 2rem;
+}

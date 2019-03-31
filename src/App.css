@@ -1,0 +1,25 @@
+.app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  background-color: #444444;
+  color: white;
+}
+
+.app-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  min-height: 2em;
+  margin: 0;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.app .game {
+  flex: 1;
+}

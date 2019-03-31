@@ -1,0 +1,43 @@
+.move {
+  display: block;
+  position: relative;
+  width: 100%;
+  background-color: rgba(200, 200, 200, 0.5);
+  transition: background-color 0.2s linear;
+}
+
+.move .label {
+  position: absolute;
+  bottom: 4%;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.move img {
+  position: absolute;
+  left: 50%;
+  width: 70%;
+  margin-left: -35%;
+  top: 5%;
+}
+
+.move.move-rock.selected {
+  background-color: rgba(205, 92, 92, 0.5);
+}
+
+.move.move-paper.selected {
+  background-color: rgba(95, 158, 160, 0.5);
+}
+
+.move.move-scissors.selected {
+  background-color: rgba(107, 142, 35, 0.5);
+}
+
+.move:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}

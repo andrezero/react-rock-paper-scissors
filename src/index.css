@@ -1,0 +1,96 @@
+/* reset  */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* layout */
+
+.container {
+  max-width: 1120px;
+  margin: 0 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    margin: 0 20px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    margin: 0 40px;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .container {
+    margin: 0 auto;
+  }
+}
+
+/* typography */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  color: #444444;
+}
+
+@media only screen and (min-width: 480px) and (min-height: 480px) {
+  html {
+    font-size: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (min-height: 768px)  {
+  html {
+    font-size: 125%;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+}
+
+/* atoms */
+
+.button {
+  padding: 0.2em 2em;
+  background-color: darkseagreen;
+  border: 1px solid darkolivegreen;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.button:active {
+  padding: 0.2em 2em;
+  background-color: lightgreen;
+  border: 1px solid darkolivegreen;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.button[disabled] {
+  cursor: default;
+}

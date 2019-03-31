@@ -1,0 +1,73 @@
+.score-board {
+  display: flex;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.score-board .score {
+  display: flex;
+  flex-direction: column-reverse;
+  text-align: center;
+}
+
+.score-board .name {
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+.score-board .value {
+  font-size: 4rem;
+}
+
+@media only screen and (orientation: portrait) {
+  .score-board {
+    padding-bottom: 10px;
+    border-bottom: 5px solid #444444;
+  }
+
+  .score-board .score {
+    flex: 1;
+  }
+
+  .score-board .score:first-child {
+    margin-right: 10px;
+  }
+}
+
+@media only screen and (orientation: landscape) {
+  .score-board {
+    flex-direction: column;
+    margin-bottom: 0;
+    padding-right: 10px;
+    justify-content: space-between;
+    padding-right: 10px;
+    border-right: 5px solid #444444;
+  }
+
+  .score-board .score:first-child {
+    line-height: 4rem;
+  }
+
+  .score-board .score:first-child {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .score-board {
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  .score-board .score:first-child {
+    margin-right: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+  .score-board {
+    margin-bottom: 0;
+    padding-right: 20px;
+  }
+}

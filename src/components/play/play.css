@@ -1,0 +1,39 @@
+.play {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.play .debug {
+  position: absolute;
+}
+
+@media only screen and (orientation: portrait) {
+  .play {
+    flex-direction: column;
+  }
+
+  .play .score-board {
+    width: 100%;
+  }
+
+  .play .current-moves {
+    width: 100%;
+  }
+
+  .play .score-update,
+  .play .move-options {
+    align-self: flex-end;
+    width: 100%;
+  }
+}
+
+@media only screen and (orientation: landscape) {
+  .play {
+    justify-content: space-between;
+  }
+
+  .play .current-moves {
+    width: 32vh;
+  }
+}

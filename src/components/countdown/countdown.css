@@ -1,0 +1,73 @@
+.countdown {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.countdown.active {
+  opacity: 1;
+}
+
+.countdown.disabled > :first-child {
+  opacity: 0.2;
+}
+
+.countdown .player {
+  width: 30vh;
+}
+
+.countdown > :first-child:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.countdown .player:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  font-size: 7rem;
+  background-color: rgba(200, 200, 200, 0.5);
+  transition: font-size 0.5s cubic-bezier(0.25, 0.1, 0.33, 4);
+}
+
+.countdown :first-child .label {
+  position: absolute;
+}
+
+.countdown .player.pulse {
+  font-size: 5rem;
+}
+
+.countdown .player.slow {
+  opacity: 1;
+  font-size: 9rem;
+  color: red;
+}
+
+@media only screen and (orientation: portrait) {
+  .countdown .player:first-child {
+    margin-right: 10px;
+  }
+}
+
+@media only screen and (orientation: landscape) {
+  .countdown {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .countdown .player {
+    width: 33vh;
+  }
+}
+
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  .countdown .player:first-child {
+    margin-right: 20px;
+  }
+}

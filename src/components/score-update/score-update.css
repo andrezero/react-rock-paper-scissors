@@ -1,0 +1,43 @@
+.score-update {
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.score-update.active {
+  opacity: 1
+}
+
+.score-update .score {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32vh;
+  height: 32vh;
+  font-size: 3rem;
+  transition: font-size 1s cubic-bezier(0.88, -0.62, 0.2, 2.18);
+}
+
+.score-update .score.active {
+  font-size: 6rem;
+}
+
+@media only screen and (orientation: portrait) {
+  .score-update .score:first-child {
+    margin-right: 10px;
+  }
+}
+@media only screen and (orientation: landscape) {
+  .score-update {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  .score-update .score:first-child {
+    margin-right: 20px;
+  }
+}
