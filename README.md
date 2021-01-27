@@ -9,6 +9,10 @@
 - Full on Typescript (with super strict linting)
 - No Redux yet, React only
 
+## WARNING: This code is not maintained
+
+Very obvious - but due - WARNING: this was just a learning exercise. All packages are super outdated and if you follow the links above you will see that some of the resources I used are even archived. The <3 for storybook is still well alive though :-) 
+
 ## Quickstart
 
 ```bash
